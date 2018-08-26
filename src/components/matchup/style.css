@@ -1,5 +1,6 @@
 .matchup {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     justify-content: center;
+    height: 120px;
 }

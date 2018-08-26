@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { DataSource } from './dataSource';
 import logo from './logo.svg';
-import List from './components/list';
+import MatchupList from './components/matchupList';
 import './App.css';
 
 class App extends Component {
@@ -19,9 +19,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          <List data={DataSource} />
-        </p>
+        <div className="App-intro">
+          <MatchupList data={DataSource} />
+        </div>
       </div>
     );
   }

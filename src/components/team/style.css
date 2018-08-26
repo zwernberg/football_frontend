@@ -1,0 +1,14 @@
+.team {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #e9ecef;
+    /* min-width: 400px; */
+}
+
+.total {
+    text-align: left;
+}
+
+.points {
+    text-align: right;
+}

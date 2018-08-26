@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
+import Team from '../team';
+import { Row, Col } from 'react-flexbox-grid';
 
 class Matchup extends Component {
     constructor(props) {
@@ -7,9 +9,10 @@ class Matchup extends Component {
       }
     render() {
         return (
-            <div className= "matchup">
-                { this.props.matchup.teams[0].team.teamNickname } { this.props.matchup.teams[0].score } vs  { this.props.matchup.teams[1].score } { this.props.matchup.teams[1].team.teamNickname }
-            </div>
+            <Row className= "matchup">
+                <Team data={this.props.matchup.teams[0]} />
+                <Team data={this.props.matchup.teams[1]} />
+            </Row>
         );
     }
 }
