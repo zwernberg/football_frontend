@@ -27,9 +27,9 @@ class MatchupList extends Component {
     }
 
     componentDidMount() {
-        fetch('http://schumacher.football/api/week/1/')
+        fetch('https://schumacher.football/api/scoreboard')
         .then(response => response.json())
-        .then(data => this.setState({leagues: data.leagues}));
+        .then(data => this.setState({leagues: data.divisions}));
     }
 }
 
