@@ -22,8 +22,9 @@
     background-color: black;  
 }
 
-.name {
-    vertical-align: middle;
+.team-name {
+    margin-top: 10px;
+    text-align: center;
 }
 
 .bottom {
