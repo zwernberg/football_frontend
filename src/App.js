@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { DataSource } from './dataSource';
 import logo from './logo.svg';
 import MatchupList from './components/matchupList';
 import './App.css';
@@ -16,11 +15,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          {/* <img src={Header} className="header" alt="logo" /> */}
+          <h1 className="App-title">Schumacher Football</h1>
         </header>
         <div className="App-intro">
-          <MatchupList data={DataSource} />
+          <MatchupList />
         </div>
       </div>
     );

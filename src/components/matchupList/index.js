@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Matchup  from '../matchup';
 import { Grid } from 'react-flexbox-grid';
+import './style.css';
 
 class MatchupList extends Component {
     constructor(props) {
@@ -16,7 +17,7 @@ class MatchupList extends Component {
             <div className= 'matchupList'>
             { leagues.map(league => (
                 <Grid fluid className="league">
-                    <div> {league.metadata.division}</div>
+                    <h2 className="name"> Division: {league.metadata.division}</h2>
                     { league.scoreboard.matchups.map(matchup => {
                         return <Matchup matchup={matchup} />
                     })}
