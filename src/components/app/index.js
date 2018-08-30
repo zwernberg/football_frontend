@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MatchupList from '../matchupList';
+import MatchupList from '../../containers/matchuplist';
 import './style.css';
 
 class App extends Component {
