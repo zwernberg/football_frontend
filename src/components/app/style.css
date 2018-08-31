@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Tecmo Touchdown";
+  src: url("/tecmo-touchdown.ttf");
+}
+
 .App {
   text-align: center;
   background-color: lightgray;
@@ -10,9 +15,11 @@
   background-size: cover;
   height: 400px;
   padding: 20px;
-  color: white;
 }
 
 .App-title {
   font-size: 1.5em;
+  font-family: "Tecmo Touchdown";
+  color: white;
+  padding: 5px;
 }

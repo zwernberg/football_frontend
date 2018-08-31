@@ -1,17 +1,19 @@
 .team {
     margin-left: 5px;
     margin-right: 5px;
-    
+    font-family: "Tecmo Touchdown";
     color: white;
     /* min-width: 400px; */
 }
 
 .total {
     text-align: left;
+    font-size: 8px;
 }
 
 .points {
     text-align: right;
+    font-size: 10px;
 }
 
 .row {
@@ -24,7 +26,8 @@
 
 .team-name {
     margin-top: 10px;
-    text-align: center;
+    text-align: center;   
+    font-size: 8px;
 }
 
 .bottom {
