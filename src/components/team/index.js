@@ -18,7 +18,7 @@ class Team extends Component {
     }
     render() {
         return (
-            <Col xs={12} md={5} className= "team">
+            <Col xs={12} md={6} className= "team">
                 <Grid fluid>
                     <Row className="top">
                         <Col xs={2} md={2}> <Helmet /> </Col>
@@ -29,7 +29,7 @@ class Team extends Component {
                         <Col xs={6} md={6} className="points"><div className="points">{ this.props.data.score } </div></Col>
                     </Row>
                 </Grid>
-            </Col>
+           </Col>
         );
     }
 }

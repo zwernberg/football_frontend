@@ -23,7 +23,7 @@ class Navigation extends Component {
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        {/* <NavItem eventKey={1} href="#" >
+                        <NavItem eventKey={1} href="#" >
                         Link
                         </NavItem>
                         <NavItem eventKey={2} href="#">
@@ -35,7 +35,7 @@ class Navigation extends Component {
                         <MenuItem eventKey={3.3}>Something else here</MenuItem>
                         <MenuItem divider />
                         <MenuItem eventKey={3.4}>Separated link</MenuItem>
-                        </NavDropdown> */}
+                        </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
