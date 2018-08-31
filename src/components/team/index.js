@@ -19,7 +19,7 @@ class Team extends Component {
                 <Grid fluid>
                     <Row className="top">
                         <Col xs={2} md={2}> <Helmet /> </Col>
-                        <Col xs={10} md={10} className="team-name">{this.name()} *{this.owner()}*</Col>
+                        <Col xs={10} md={10} className="team-name">{this.name()} ({this.owner()})</Col>
                     </Row>
                     <Row className="bottom">
                         <Col xs={6} md={6} className="total">TOTAL</Col>

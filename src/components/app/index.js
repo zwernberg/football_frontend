@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom'
+
 import MatchupList from '../../containers/matchuplist';
+import Test from '../../components/test';
+
 import './style.css';
+
+
 
 class App extends Component {
   constructor(props) {
@@ -17,7 +23,7 @@ class App extends Component {
           <h1 className="App-title">Schumacher Football</h1>
         </header>
         <div className="App-intro">
-          <MatchupList />
+            <Route exact path="/" component={MatchupList} />
         </div>
       </div>
     );
