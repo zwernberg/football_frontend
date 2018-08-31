@@ -8,18 +8,18 @@ class Team extends Component {
         super(props);
       }
     name() {
-        return `${this.props.data.team.teamLocation} ${this.props.data.team.teamNickname}`.toString();
+        return `${this.props.data.team.teamLocation} ${this.props.data.team.teamNickname}`.toString().toUpperCase();
     }
     owner() {
-        return `${this.props.data.team.owner}`.toString();
+        return `${this.props.data.team.owner}`.toString().toUpperCase();
     }
     render() {
         return (
-            <Col xs={12} md={4} className= "team">
+            <Col xs={12} md={5} className= "team">
                 <Grid fluid>
                     <Row className="top">
                         <Col xs={2} md={2}> <Helmet /> </Col>
-                        <Col xs={10} md={10} className="team-name">{this.name()}  ({this.owner()})</Col>
+                        <Col xs={10} md={10} className="team-name">{this.name()} *{this.owner()}*</Col>
                     </Row>
                     <Row className="bottom">
                         <Col xs={6} md={6} className="total">TOTAL</Col>
