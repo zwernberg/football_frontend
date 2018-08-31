@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom'
+import Button from 'react-bootstrap/lib/Button';
+
 
 import MatchupList from '../../containers/matchuplist';
-import Test from '../../components/test';
+import Navigation from '../navbar';
 
 import './style.css';
 
@@ -19,8 +21,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navigation />
         <header className="App-header">
-          <h1 className="App-title">Schumacher Football</h1>
+          <h1 className="App-title"></h1>
         </header>
         <div className="App-intro">
             <Route exact path="/" component={MatchupList} />

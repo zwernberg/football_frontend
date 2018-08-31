@@ -14,10 +14,10 @@
 }
 
 .App-header {
-  background-image: url(/header.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-image: url(/header.png), url(/stadium.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: left, right;
+  background-size: auto;
   height: 400px;
   padding: 20px;
 }

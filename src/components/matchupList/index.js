@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Matchup  from '../matchup';
-import { Grid } from 'react-flexbox-grid';
+import Grid from 'react-bootstrap/lib/Grid';
 import PropTypes from 'prop-types'
 
 import './style.css';

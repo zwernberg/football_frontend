@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 import Team from '../team';
-import { Row, Col } from 'react-flexbox-grid';
+import Row from 'react-bootstrap/lib/Row';
 
 class Matchup extends Component {
     constructor(props) {

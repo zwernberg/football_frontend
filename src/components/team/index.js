@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import Grid from 'react-bootstrap/lib/Grid';
+import Col from 'react-bootstrap/lib/Col';
+
+import Row from 'react-bootstrap/lib/Row';
 import Helmet from '../helmet';
 import './style.css';
 
