@@ -23,8 +23,8 @@ class Navigation extends Component {
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavItem componentClass={Link} eventKey={1} href="/" to="/">Scoreboard</NavItem>
-                        <NavItem componentClass={Link} eventKey={2} href="/standings" to="/standings">Standings</NavItem>
+                        <NavItem componentClass={Link} eventKey={1} href="/" to="/">SCOREBOARD</NavItem>
+                        <NavItem componentClass={Link} eventKey={2} href="/standings" to="/standings">STANDINGS</NavItem>
                         {/* <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
                         <MenuItem eventKey={3.1}>Action</MenuItem>
                         <MenuItem eventKey={3.2}>Another action</MenuItem>
