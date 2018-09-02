@@ -14,7 +14,7 @@ class StandingsList extends Component {
         return (
             <div className= 'standings'>
             { this.props.Standings.divisions.map(league => (
-                <Grid className="league" key={league.metadata.division}>
+                <Grid fluid className="league" key={league.metadata.division}>
                     <h2 className="name">{league.metadata.division} DIVISION </h2>
                     { league.teams.map(team => {
                         return <Team data={team} key={league.metadata.division + team.teamId}/>

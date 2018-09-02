@@ -26,7 +26,7 @@ class Team extends Component {
                     <Row className="standing-row">
                         <Col xs={1} md={1} className="rank"> {this.rank()} </Col>
                         <Col xs={11} md={8} className="standing-name">{this.name()} ({this.owner()})</Col>
-                        <Col xs={12} xsOffset={1} md={2} className="record">{this.record()}</Col>
+                        <Col xs={11} xsOffset={1} md={2} className="record">{this.record()}</Col>
                     </Row>
         );
     }
