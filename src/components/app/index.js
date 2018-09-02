@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/lib/Button';
 
 
 import MatchupList from '../../containers/matchuplist';
+import Standings from '../../containers/standings';
+
 import Navigation from '../navbar';
 
 import './style.css';
@@ -27,6 +29,7 @@ class App extends Component {
         </header>
         <div className="App-intro">
             <Route exact path="/" component={MatchupList} />
+            <Route exact path="/standings" component={Standings} />
         </div>
       </div>
     );

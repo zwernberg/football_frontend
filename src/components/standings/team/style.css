@@ -1,0 +1,14 @@
+.standing-row{
+    background-color: black;
+    color: white;
+}
+.rank {
+    color: red;
+}
+
+.standing-name {
+    text-align: left;
+}
+.record {
+    text-align: left;
+}
