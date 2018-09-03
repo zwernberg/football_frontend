@@ -1,0 +1,60 @@
+import React, { Component } from 'react';
+import { Grid, Row, Col, Button } from 'react-bootstrap';
+import { connect } from 'react-redux'
+
+import './style.css';
+
+function sendSocketMessage(name, message) {
+    return {
+        type : "SEND_WEBSOCKET_MESSAGE",
+        payload : {
+            name,
+            message
+        }
+    }
+}
+
+class AddMessage extends Component {
+    
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            name: '',
+            message: ''
+        }
+      }
+    onClick = (evt) => {
+        this.props.dispatch(sendSocketMessage(this.state.name, this.state.message));
+        this.setState({
+            message: ''
+        })
+    };
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+    
+    render() {
+        return (
+            <Grid fluid className= "add-message">
+                <Row>
+                    <Col xs={6} md={4}>
+                    <input type="text" class="form-control" id="name" name='name' placeholder="NAME" value={this.state.name} onChange={e => this.handleChange(e)}></input>
+                    </Col>
+                    <Col xs={6} md={6}>
+                    <input type="text" class="form-control" id="message" name="message" placeholder="MESSAGE" value={this.state.message} onChange={e => this.handleChange(e)}></input>
+                    </Col>
+                    <Col xs={12} md={2}>
+                    <Button bsStyle="primary" onClick={(e) => this.onClick(e)} >SUBMIT</Button>
+                    </Col>
+                </Row>
+            </Grid>
+        );
+    }
+}
+
+
+export default connect()(AddMessage);

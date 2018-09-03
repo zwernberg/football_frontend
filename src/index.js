@@ -6,6 +6,8 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers';
 import thunkMiddleware from 'redux-thunk'
+import createSocketMiddleware from './middleware/socket';
+
 import { BrowserRouter as Router } from 'react-router-dom'
 
 const store = createStore(
@@ -13,6 +15,7 @@ const store = createStore(
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
     applyMiddleware(
         thunkMiddleware,
+        createSocketMiddleware('wss://schumacher.football/ws/chat/main/')
     )
 );
 
