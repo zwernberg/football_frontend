@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import Grid from 'react-bootstrap/lib/Grid';
-import Col from 'react-bootstrap/lib/Col';
-import Row from 'react-bootstrap/lib/Row';
+import { Grid, Col, Row} from 'react-bootstrap';
 
 import './style.css';
 
@@ -19,7 +17,7 @@ class Team extends Component {
         return `${this.props.data.overallStanding}`;
     }
     record (){
-        return `${this.props.data.record.overallWins} - ${this.props.data.record.overallLosses}`;
+        return `${this.props.data.record.overallWins}-${this.props.data.record.overallLosses}`;
     }
     render() {
         return (

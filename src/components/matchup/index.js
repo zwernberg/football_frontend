@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 import Team from '../team';
-import Row from 'react-bootstrap/lib/Row';
+import { Row } from 'react-bootstrap';
 
 class Matchup extends Component {
     constructor(props) {

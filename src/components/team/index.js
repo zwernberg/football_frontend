@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import Grid from 'react-bootstrap/lib/Grid';
-import Col from 'react-bootstrap/lib/Col';
+import { Grid, Col, Row} from 'react-bootstrap';
 
-import Row from 'react-bootstrap/lib/Row';
 import Helmet from '../helmet';
 import './style.css';
 
@@ -16,13 +14,22 @@ class Team extends Component {
     owner() {
         return `${this.props.data.team.owner}`.toString().toUpperCase();
     }
+    record() {
+        return `(${this.props.data.team.record.overallWins}-${this.props.data.team.record.overallLosses})`
+    }
     render() {
         return (
             <Col xs={12} md={6} className= "team">
                 <Grid fluid>
                     <Row className="top">
                         <Col xs={2} md={2}> <Helmet /> </Col>
-                        <Col xs={10} md={10} className="team-name">{this.name()} ({this.owner()})</Col>
+                        <Col xs={10} md={10} className="team-name">
+                            <Row>
+                                <Col xs={12} md={12}>{this.name()}</Col>
+                                <Col xs={12} md={12}>{this.record()} {this.owner()}</Col>
+                            </Row>
+                        </Col>
+                        {/* <Col xs={10} md={10} className="team-name">{this.name()} ({this.owner()})</Col> */}
                     </Row>
                     <Row className="bottom">
                         <Col xs={6} md={6} className="total">TOTAL</Col>
