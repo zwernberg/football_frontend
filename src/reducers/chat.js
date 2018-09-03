@@ -2,10 +2,6 @@ import { REQUEST_MESSAGES, RECIEVE_MESSAGES, RECIEVE_MESSAGE } from '../actions/
 
 const initialState = {
     Messages: [
-        {
-            'name': 'zach',
-            'message': 'test',
-        }
     ],
     isLoading: false,
     connected: false,
