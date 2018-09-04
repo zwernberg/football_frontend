@@ -11,6 +11,7 @@
 .App {
   text-align: center;
   background-color: lightgray;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .App-header {
@@ -24,14 +25,14 @@
 
 .App-title {
   font-size: 1.5em;
-  font-family: "Tecmo Set1";
+  font-family: 'Roboto Mono', monospace;
   color: white;
   padding: 5px;
 }
 
 a{
-  font-family: "Tecmo Set1";
+  font-family: 'Roboto Mono', monospace;
 }
 body {
-  font-size: 12px;
+  font-size: 14px;
 }
