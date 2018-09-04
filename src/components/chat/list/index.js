@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, }  from 'react';
+import ReactDOM from 'react-dom'
 import { Grid } from 'react-bootstrap';
 import PropTypes from 'prop-types'
 
@@ -8,20 +9,29 @@ import Message from '../message';
 class ChatList extends Component {
     constructor(props) {
         super(props);
+        this.scrollToBottom = this.scrollToBottom.bind(this);
     }
     render() {
         return (
-            <Grid className= 'messageList'>
-            { this.props.Chat.Messages.map(message => (
-                    <Message data={message}/>
+            <Grid className= 'messageList' ref={(el) => { this.messagesContainer = el; }} >
+                { this.props.Chat.Messages.map(message => (
+                    <Message data={message} key={message.id}/>
               ))}
             </Grid>
         );
     }
 
+    scrollToBottom = () => {
+        const messagesContainer = ReactDOM.findDOMNode(this.messagesContainer);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    };
+      
     componentDidMount() {
-        setTimeout(this.props.onComponentDidMount, 5000);
-        //this.props.onComponentDidMount();
+        this.scrollToBottom();
+    }
+    
+    componentDidUpdate() {
+        this.scrollToBottom();
     }
 }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Col, Row} from 'react-bootstrap';
+import Moment from 'react-moment';
 
 import './style.css';
 
@@ -13,11 +14,14 @@ class ChatMessage extends Component {
     message() {
         return `${this.props.data.message}`
     }
+    dateTime() {
+        return <Moment className="messageDate" fromNow>{this.props.data.created}</Moment>
+    }
     render() {
         return (
             <Row>
-                <Col xs={2} md={2} className="messageName">{this.user()}</Col>
-                <Col xs={10} md={10} className="messageContent">{this.message()}</Col>
+                <Col xs={12} md={3} className="messageName">{this.user()} ({this.dateTime()})</Col>
+                <Col xs={12} md={9} className="messageContent">{this.message()}</Col>
             </Row>
         );
     }

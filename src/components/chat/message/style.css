@@ -2,6 +2,10 @@
     text-align: left;
 }
 
+.messageDate {
+    font-size: 10px;
+}
+
 .messageContent {
     text-align: left;
 }
