@@ -1,4 +1,4 @@
-import {RECIEVE_MESSAGE} from '../actions/chat';
+import {RECIEVE_MESSAGE, RECIEVE_MESSAGES } from '../actions/chat';
 
 const createSocketMiddleware = (url) => {
     const _url = url;
@@ -8,12 +8,27 @@ const createSocketMiddleware = (url) => {
         function init() {
             console.log(_url);
             socket = new WebSocket(_url);
-            
+            socket.onopen = function(e) {
+                var data = {
+                    'payload' : {
+                        'type': 'RETRIEVE_MESSAGES'
+                    }
+                }
+                socket.send(JSON.stringify(data));
+            }
             socket.onmessage = function(message) {
-                store.dispatch({
-                    type : RECIEVE_MESSAGE,
-                    payload : message
-                });
+                if (JSON.parse(message.data).type === 'messages') {
+                    store.dispatch({
+                        type : RECIEVE_MESSAGES,
+                        payload : message
+                    });
+                } else {
+                    store.dispatch({
+                        type: RECIEVE_MESSAGE,
+                        payload: message
+                    })
+                }
+                
             };
 
             socket.onclose = function(e) {
@@ -36,7 +51,7 @@ const createSocketMiddleware = (url) => {
 
         return next => action => {
             if(action.type == "SEND_WEBSOCKET_MESSAGE") {
-                socket.send(JSON.stringify(action.payload));
+                socket.send(JSON.stringify(action));
                 return;
             }
 

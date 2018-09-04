@@ -29,7 +29,7 @@ const Matchups = (state= initialState, action) => {
         case RECIEVE_MESSAGES:
             return {
                 ...state,
-                Messages: [...state.Messages, action.payload.data['payload']]
+                Messages: [...JSON.parse(action.payload.data).payload]
 
             };
         case RECIEVE_MESSAGE:

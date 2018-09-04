@@ -4,11 +4,12 @@ import { connect } from 'react-redux'
 
 import './style.css';
 
-function sendSocketMessage(name, message) {
+function sendSocketMessage(user, message) {
     return {
         type : "SEND_WEBSOCKET_MESSAGE",
         payload : {
-            name,
+            'type': 'SEND_MESSAGE',
+            user,
             message
         }
     }
@@ -20,12 +21,12 @@ class AddMessage extends Component {
         super(props);
 
         this.state = {
-            name: '',
+            user: '',
             message: ''
         }
       }
     onClick = (evt) => {
-        this.props.dispatch(sendSocketMessage(this.state.name, this.state.message));
+        this.props.dispatch(sendSocketMessage(this.state.user, this.state.message));
         this.setState({
             message: ''
         })
@@ -42,7 +43,7 @@ class AddMessage extends Component {
             <Grid fluid className= "add-message">
                 <Row>
                     <Col xs={6} md={4}>
-                    <input type="text" class="form-control" id="name" name='name' placeholder="NAME" value={this.state.name} onChange={e => this.handleChange(e)}></input>
+                    <input type="text" class="form-control" id="name" name='user' placeholder="NAME" value={this.state.user} onChange={e => this.handleChange(e)}></input>
                     </Col>
                     <Col xs={6} md={6}>
                     <input type="text" class="form-control" id="message" name="message" placeholder="MESSAGE" value={this.state.message} onChange={e => this.handleChange(e)}></input>
