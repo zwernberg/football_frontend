@@ -2,7 +2,10 @@
     font-family: "Tecmo Set1";
     color: white;
 }
-.name {
+.division-header {
     margin-top: 20px;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
