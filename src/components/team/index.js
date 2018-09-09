@@ -21,19 +21,21 @@ class Team extends Component {
         return (
             <Col xs={12} md={6} className= "team">
                 <Grid fluid>
-                    <Row className="top">
+                    <Row>
                         <Col xs={2} md={2}> <Helmet /> </Col>
-                        <Col xs={10} md={10} className="team-name">
+                        <Col xs={6} md={6} className="team-name tecmo-font">
                             <Row>
                                 <Col xs={12} md={12}>{this.name()}</Col>
-                                <Col xs={12} md={12}>{this.record()} {this.owner()}</Col>
+                                <Col className="body-copy-font" xs={12} md={12}>{this.record()} {this.owner()}</Col>
+                            </Row>
+                        </Col>
+                        <Col xs={4} md={4}> <div className="tecmo-font"></div> 
+                            <Row>
+                                <Col className="points-header" xs={12} md={12}>SCORE</Col>
+                                <Col className="points" xs={12} md={12}>{ this.props.data.score } </Col>
                             </Row>
                         </Col>
                         {/* <Col xs={10} md={10} className="team-name">{this.name()} ({this.owner()})</Col> */}
-                    </Row>
-                    <Row className="bottom">
-                        <Col xs={6} md={6} className="total">TOTAL</Col>
-                        <Col xs={6} md={6} className="points"><div className="points">{ this.props.data.score } </div></Col>
                     </Row>
                 </Grid>
            </Col>

@@ -10,7 +10,7 @@
 
 .App {
   text-align: center;
-  background-color: lightgray;
+  background-color: black;
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -36,3 +36,19 @@ a{
 body {
   font-size: 14px;
 }
+.tecmo-font {
+  font-family: "Tecmo Set1";
+}
+.body-copy-font {
+  font-family: 'Roboto Mono', monospace;
+}
+.tecmo-underline {
+  text-decoration: underline solid #FC74B4;
+}
+.tecmo-blue {
+  color: #3CBCFC;
+}
+.tecmo-pink {
+  color: #FC74B4;
+}
+

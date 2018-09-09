@@ -14,7 +14,7 @@ class MatchupList extends Component {
             <div className= 'matchupList'>
             { this.props.Matchups.divisions.map(league => (
                 <Grid fluid className="league" key={league.metadata.division}>
-                    <h2 className="name">{league.metadata.division} DIVISION </h2>
+                    <h2 className="name tecmo-underline">{league.metadata.division} DIVISION </h2>
                     { league.scoreboard.matchups.map(matchup => {
                         return <Matchup matchup={matchup} key={league.metadata.division + matchup.teams[0].teamId}/>
                     })}

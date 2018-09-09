@@ -1,3 +1,14 @@
 .matchup {
     justify-content: center;
+    margin-bottom: 30px;
+    
+}
+.matchup::after {
+    content: '';
+    display: block;
+    position: relative;
+    top: 10px;
+    width: 80%;
+    left: 10%;
+    border-top: 3px solid #3CBCFC;
 }
