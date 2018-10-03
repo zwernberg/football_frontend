@@ -35,7 +35,7 @@ class BoxScore extends Component {
     }
 
     componentWillUnmount() {
-        clearImmediate(this.interval);
+        clearInterval(this.interval);
     }
 }
 
