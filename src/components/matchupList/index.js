@@ -22,7 +22,7 @@ class MatchupList extends Component {
                         <Col xs={0} md={3}></Col>
                     </Row>
                     { league.scoreboard.matchups.map(matchup => {
-                        return <Matchup matchup={matchup} key={league.metadata.division + matchup.teams[0].teamId}/>
+                        return <Matchup matchup={matchup} metadata={league.metadata} matchupPeriodId={league.scoreboard.matchupPeriodId} key={league.metadata.division + matchup.teams[0].teamId}/>
                     })}
                 </Grid>
               ))}

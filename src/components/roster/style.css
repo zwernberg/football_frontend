@@ -1,0 +1,40 @@
+.team {  
+    color: white;
+
+    /* min-width: 400px; */
+}
+
+.total {
+    text-align: left;
+    /* font-size: 8px; */
+}
+.points-header {
+    font-size: 16px;
+}
+.total {
+    text-align: center;
+    font-size: 20px;
+}
+
+.row {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    
+}
+.top {
+    background-color: black;
+    line-height: 18px;
+}
+
+.team-name {
+    margin-top: 10px;
+    text-align: left;   
+    /* font-size: 8px; */
+}
+
+.players-header {
+    font-size: 20px;
+    margin-top: 20;
+    margin-bottom: 20;
+}
+

@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/lib/Button';
 
 import MatchupList from '../../containers/matchuplist';
 import Standings from '../../containers/standings';
+import BoxScore from '../../containers/boxscore';
 
 import ChatBox from '../chat/box';
 import Navigation from '../navbar';
@@ -33,6 +34,7 @@ class App extends Component {
             <ChatBox />
             <Route exact path="/" component={MatchupList} />
             <Route exact path="/standings" component={Standings} />
+            <Route exact path="/boxscore/:leagueId/:weekId/:teamId" component={BoxScore} />
         </div>
       </div>
     );
