@@ -15,7 +15,7 @@ const store = createStore(
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
     applyMiddleware(
         thunkMiddleware,
-        createSocketMiddleware('wss://schumacher.football/ws/chat/main/')
+        // createSocketMiddleware('wss://schumacher.football/ws/chat/main/')
     )
 );
 
